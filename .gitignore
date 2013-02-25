@@ -166,7 +166,4 @@ pip-log.txt
 #Windriver
 *.[oa]
 
-.wrmakefile
-.wrproject
-
 PPC603GNU/
