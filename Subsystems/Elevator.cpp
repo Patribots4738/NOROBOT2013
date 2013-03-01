@@ -4,10 +4,10 @@
 Elevator::Elevator() : Subsystem("Elevator"){
 	rvex = new Jaguar(RVEX_PORT);
 	lvex = new Jaguar(LVEX_PORT);
-	upperDetection = new DigitalInput(1);
-	lowerDetection = new DigitalInput(2);
-	lowerLight = new AnalogChannel(7);
-	upperLight = new AnalogChannel(4);
+	upperDetection = new DigitalInput(UPPER_TOUCH_DETECTOR);
+	lowerDetection = new DigitalInput(LOWER_TOUCH_DETECTOR);
+	lowerLight = new AnalogChannel(LOWER_LIGHT_DETECTOR);
+	upperLight = new AnalogChannel(UPPER_LIGHT_DETECTOR);
 }
 
 void Elevator::lift() {

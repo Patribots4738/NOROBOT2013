@@ -4,6 +4,11 @@
 #include "Commands/Subsystem.h"
 #include "WPILib.h"
 
+#define LIFT_RIGHT true
+#define LIFT_LEFT false
+#define LIFT_RAISE true
+#define LIFT_LOWER false
+
 class Lift : public Subsystem {
 private:
 	Jaguar *Rwindowm, *Lwindowm;

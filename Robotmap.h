@@ -11,8 +11,8 @@
  
 // For example to map the left and right motors, you could define the
 // following variables to use with your drivetrain subsystem.
-// #define LEFTMOTOR 1
-// #define RIGHTMOTOR 2
+ #define LEFTMOTOR 2
+ #define RIGHTMOTOR 1
 
 // If you are using multiple modules, make sure to define both the port
 // number and the module. For example you with a rangefinder:
@@ -27,5 +27,17 @@
 #define UPPER_DELIVERY 9
 #define LOWER_DELIVERY 6
 #define RAMP_LIFTER 10
+
+//digital IO
+#define UPPER_TOUCH_DETECTOR 1
+#define LOWER_TOUCH_DETECTOR 2
+
+//analog IO
+#define LOWER_LIGHT_DETECTOR 7
+#define UPPER_LIGHT_DETECTOR 4
+
+//XBOX control inputs
+#define LEFT_Y_AXIS 2
+#define RIGHT_Y_AXIS 5
 
 #endif

@@ -4,7 +4,7 @@
 #include <math.h>
 
 Chassis::Chassis() : Subsystem("Chassis") {
-	drive = new RobotDrive(2,1);
+	drive = new RobotDrive(LEFTMOTOR,RIGHTMOTOR);
 	drive->SetSafetyEnabled(false);
 }
 
@@ -22,8 +22,8 @@ void Chassis::turnLeft() {
 
 void Chassis::tankDrive(Joystick* stick) {
 	//2 is the left y axis, 5 is right axis
-	float leftAxis = (stick->GetRawAxis(2) * -1);
-	float rightAxis = (stick->GetRawAxis(5) * -1);
+	float leftAxis = (stick->GetRawAxis(LEFT_Y_AXIS) * -1);
+	float rightAxis = (stick->GetRawAxis(RIGHT_Y_AXIS) * -1);
 	//linear acceleration
 	drive->TankDrive(leftAxis, rightAxis);
 }
