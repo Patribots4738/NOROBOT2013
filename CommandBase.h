@@ -4,10 +4,6 @@
 #include "Commands/Command.h"
 #include "Subsystems/ExampleSubsystem.h"
 #include "Subsystems/Chassis.h"
-#include "Subsystems/Lift.h"
-#include "Subsystems/Elevator.h"
-#include "Subsystems/Intake.h"
-#include "Subsystems/Delivery.h"
 #include "OI.h"
 
 
@@ -25,10 +21,6 @@ public:
 	static ExampleSubsystem *examplesubsystem;
 	static OI *oi;
 	static Chassis *chassis;
-	static Lift* lift;
-	static Elevator *elevator;
-	static Intake *intake;
-	static Delivery* delivery;
 };
 
 #endif

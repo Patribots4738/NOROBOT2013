@@ -1,7 +1,6 @@
 #include "WPILib.h"
 #include "Commands/Command.h"
 #include "Commands/ExampleCommand.h"
-#include "Commands/ServoReset.h"
 #include "CommandBase.h"
 
 class CommandBasedRobot : public IterativeRobot {
@@ -12,10 +11,7 @@ private:
 	virtual void RobotInit() {
 		CommandBase::init();
 		autonomousCommand = new ExampleCommand();
-		resetCommand = new ServoReset();
 		lw = LiveWindow::GetInstance();
-		CommandBase::elevator->updateStatus();
-		CommandBase::delivery->updateStatus();
 	}
 	
 	virtual void AutonomousInit() {
@@ -35,22 +31,15 @@ private:
 		//reset servos
 		//uncomment later
 		//resetCommand->Start();
-		CommandBase::elevator->updateStatus();
-		CommandBase::delivery->updateStatus();
-		CommandBase::intake->updateStatus();
 	}
 	
 	virtual void TeleopPeriodic() {
 		Scheduler::GetInstance()->Run();
-		CommandBase::elevator->updateStatus();
-		CommandBase::delivery->updateStatus();
-		CommandBase::intake->updateStatus();
 		
 	}
 	
 	virtual void TestPeriodic() {
 		lw->Run();
-		lw->AddActuator("Intake", "ramplifter", CommandBase::intake->getServo());
 	}
 };
 
