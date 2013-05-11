@@ -4,6 +4,7 @@
 #include "Commands/Command.h"
 #include "Subsystems/ExampleSubsystem.h"
 #include "Subsystems/Chassis.h"
+#include "Subsystems/Shooter.h"
 #include "OI.h"
 
 
@@ -21,6 +22,7 @@ public:
 	static ExampleSubsystem *examplesubsystem;
 	static OI *oi;
 	static Chassis *chassis;
+	static Shooter *shooter;
 };
 
 #endif

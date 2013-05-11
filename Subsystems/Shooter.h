@@ -1,7 +1,7 @@
 #ifndef SHOOTER_H
 #define SHOOTER_H
 
-#include "../CommandBase.h"
+#include "Commands/Subsystem.h"
 #include "WPILib.h"
 
 #define SHOOTER_LIFT true

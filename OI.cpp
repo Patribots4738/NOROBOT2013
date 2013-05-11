@@ -1,4 +1,8 @@
 #include "OI.h"
+#include "Commands/IncreaseShooterAngle.h"
+#include "Commands/DecreaseShooterAngle.h"
+#include "Commands/StartShooter.h"
+#include "Commands/StopShooter.h"
 
 OI::OI() {
 	//these controls are not final
@@ -10,6 +14,11 @@ OI::OI() {
 	xbox_leftbumper = new JoystickButton(xbox, 5);
 	xbox_A = new JoystickButton(xbox, 1);
 	//Xbox controller map
+	xbox_rightbumper->WhileHeld(new IncreaseShooterAngle());
+	xbox_leftbumper->WhileHeld(new DecreaseShooterAngle());
+	
+	xbox_A->WhenPressed(new StartShooter());
+	xbox_A->WhenReleased(new StopShooter());
 	
 	//declaring JOYSTICK buttons here
 	trigger=new JoystickButton(stick, 1);
